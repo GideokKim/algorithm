@@ -2,6 +2,9 @@ import sys
 
 t = int(sys.stdin.readline().strip())
 
+results = []
 for _ in range(t):
-    a, b = map(int, sys.stdin.readline().strip().split())
-    print(a + b)
+    A, B = map(int, sys.stdin.readline().split())
+    results.append(A + B)
+
+sys.stdout.write('\n'.join(map(str, results)))

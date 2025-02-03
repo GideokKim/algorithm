@@ -57,7 +57,6 @@ class Queue2 {
 
 #ifdef BOJ_SUBMIT
 int main() {
-  // 입출력 최적화를 위한 코드
   std::ios_base::sync_with_stdio(false);
   std::cin.tie(nullptr);
   std::cout.tie(nullptr);

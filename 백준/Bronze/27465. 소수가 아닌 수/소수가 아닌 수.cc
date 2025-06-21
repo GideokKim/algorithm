@@ -8,12 +8,7 @@ class CompositeNumber {
  public:
   void SetInputs() { std::cin >> n; }
 
-  void Calculate() {
-    if (n == 1) {
-      n = 2;
-    }
-    result = 2 * n;
-  }
+  void Calculate() { result = 1000000000; }
 
   void PrintResult() const { std::cout << result; }
 

@@ -6,10 +6,6 @@ using namespace std;
 vector<vector<int>> solution(int n) {
     vector<vector<int>> answer;
     answer.resize(n, std::vector<int>(n, 0));
-    if (n == 1) {
-        answer[0][0] = 1;
-        return answer;
-    }
     
     std::vector<int> dx = {0, 1, 0, -1};
     std::vector<int> dy = {1, 0, -1, 0};
@@ -27,8 +23,7 @@ vector<vector<int>> solution(int n) {
             index %= 4;
             x += dx[index];
             y += dy[index];
-        }
-        if (answer[x][y]) {
+        } else if (answer[x][y]) {
             x -= dx[index];
             y -= dy[index];
             ++index;

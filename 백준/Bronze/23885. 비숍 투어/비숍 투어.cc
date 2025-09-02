@@ -9,7 +9,19 @@ class BishopTour {
  public:
   void SetInputs() { std::cin >> n >> m >> s_x >> s_y >> e_x >> e_y; }
 
-  void Calculate() { result = (s_x + s_y + e_x + e_y) % 2 ? "NO" : "YES"; }
+  void Calculate() {
+    if (n == 1 && s_y != e_y) {
+      result = "NO";
+      return;
+    }
+
+    if (m == 1 && s_x != e_x) {
+      result = "NO";
+      return;
+    }
+
+    result = (s_x - s_y + e_x - e_y) % 2 ? "NO" : "YES";
+  }
 
   void PrintResult() { std::cout << result; }
 

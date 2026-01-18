@@ -18,14 +18,17 @@ class DoYouBelieveInFate {
     for (auto target : input) {
       if (target == *korea_iter) {
         ++korea_iter;
-      } else if (target == *yonsei_iter) {
+      }
+      if (target == *yonsei_iter) {
         ++yonsei_iter;
       }
 
       if (korea_iter == korea.end()) {
         result = korea;
+        return;
       } else if (yonsei_iter == yonsei.end()) {
         result = yonsei;
+        return;
       }
     }
   }

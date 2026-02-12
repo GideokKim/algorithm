@@ -20,7 +20,11 @@ class Bread {
     result = -1;
     for (auto target : bakeries) {
       if (target.first <= target.second) {
-        result = target.second;
+        if (result < 0) {
+          result = target.second;
+        } else {
+          result = result < target.second ? result : target.second;
+        }
       }
     }
   }
